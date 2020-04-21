@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	
-	<groupId>com.mindtree.webflux.poc</groupId>
+	<groupId>com.webflux.poc</groupId>
 	<artifactId>webflux-microservice-poc</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>webflux-microservice-poc</name>
@@ -127,7 +127,7 @@
 				  <archive>
 					<manifest>
 						<!-- Jar file entry point -->
-						<mainClass>com.mindtree.webflux.poc.WebfluxMicroservicePocApplication</mainClass>
+						<mainClass>com.webflux.poc.WebfluxMicroservicePocApplication</mainClass>
 					</manifest>
 				  </archive>
 				  <descriptorRefs>
