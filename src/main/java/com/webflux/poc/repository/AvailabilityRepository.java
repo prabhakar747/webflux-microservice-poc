@@ -32,8 +32,8 @@ public interface AvailabilityRepository extends ReactiveMongoRepository<Availabi
 	
 	
 	
-	@Query("{'restaurantId':?0}")
-	Mono<Availability> findByResIdAndDate(String restaurantId);
+	@Query("{'restaurantId':?0, 'forDate':{$eq: 0}}")
+	Mono<Availability> findByResIdAndDate(String restaurantId, Date forDate);
 
 
 }

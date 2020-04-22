@@ -53,7 +53,11 @@ public class ReservationService implements ReservationInterface {
 		  //resMono.map(res -> {return updateAvalabiltyDocument(res);});
 		  //resMono.subscribe(res -> updateAvalabiltyDocument(res));
 		  //updateAvalabiltyDocument(reservationVO);
-		  return reservationRepository.save(reservationMapper.convertToDocument(reservationVO)).flatMap(res -> {updateAvalabiltyDocument(res);return Mono.justOrEmpty(res);});
+		  return reservationRepository.save(reservationMapper.convertToDocument(reservationVO))
+				  .flatMap(res -> {
+					  updateAvalabiltyDocument(res);
+					  return Mono.justOrEmpty(res);
+				});
 		 
 		 
 	}

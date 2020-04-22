@@ -67,7 +67,7 @@
 			<artifactId>reactor-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/com.github.tomakehurst/wiremock -->
+		<!--Wiremock :  https://mvnrepository.com/artifact/com.github.tomakehurst/wiremock -->
 			<dependency>
 			    <groupId>com.github.tomakehurst</groupId>
 			    <artifactId>wiremock-jre8</artifactId>
@@ -75,17 +75,6 @@
 			</dependency>
 				
 	</dependencies>
-	
-
-<!-- 	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build> -->
-	
 	
 	
 	<build>
@@ -101,7 +90,6 @@
 					<target>${java.version}</target>
 				</configuration>
 			</plugin>
-			
 			
 			<!-- This plugin puts all dependencies in the target/classes/lib folder-->
 			<plugin>
@@ -126,10 +114,6 @@
 
 			<!-- Make this jar executable -->
 			<plugin>
-				<!-- We should not use mave jar plugin.  Instated of that we should use spring provided maven plugin  -->
-				<!-- <groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-jar-plugin</artifactId> -->
-				
 				<groupId>org.springframework.boot</groupId>
     			<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration> 

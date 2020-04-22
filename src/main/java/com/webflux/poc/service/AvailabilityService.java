@@ -56,15 +56,14 @@ public class AvailabilityService implements AvailabilityServiceInterface{
 	public void updateAvalabiltyDocument(Reservation reservation) {
 		
 		
-		 availabilityRepository.findByResIdAndDate("5e8cd4d31fbf087bd8581ee3")
+		 availabilityRepository.findByResIdAndDate(reservation.getRestaurantId(),reservation.getReservationDate())
 		 .map(old -> {
 			 Availability newAva = new Availability();
 			 newAva.setId(old.getId());
-			 newAva.setAvailable(4);
+			 newAva.setAvailable(old.getAvailable()-1);
 			 return newAva;
 		 })
 		 .flatMap(currentAvailabilityRow -> {
-			System.out.println("-------------------Inside-----------------------------");
 			return availabilityRepository.save(currentAvailabilityRow);
 		});
 		
@@ -72,14 +71,7 @@ public class AvailabilityService implements AvailabilityServiceInterface{
 		
 	}
 
-	@Override
-	public Mono<Availability> updateAvailabilityMasterData(Availability availability, String id) {
-		return availabilityRepository.findByResIdAndDate("5e8cd4d31fbf087bd8581ee3").flatMap(currentAvailability -> {
-			currentAvailability.setAvailable(availability.getAvailable()-1);
-			return availabilityRepository.save(currentAvailability);
-		});
-		
-	}
+	
 
 	
 }

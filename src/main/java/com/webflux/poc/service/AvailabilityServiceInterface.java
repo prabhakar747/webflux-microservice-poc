@@ -21,6 +21,5 @@ public interface AvailabilityServiceInterface {
 	public Flux<Availability> availabilitySearch(AvailabilityVO availabilityVO);
 	public void updateAvalabiltyDocument(Reservation reseravtion);
 	
-	public Mono<Availability> updateAvailabilityMasterData(Availability availability,String id);
 	 
 }

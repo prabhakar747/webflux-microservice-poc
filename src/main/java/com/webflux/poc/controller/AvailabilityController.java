@@ -10,20 +10,16 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.webflux.poc.constants.RestaurantBookingConstants;
 import com.webflux.poc.model.Availability;
-import com.webflux.poc.model.Reservation;
 import com.webflux.poc.service.AvailabilityService;
 import com.webflux.poc.service.ReservationService;
 import com.webflux.poc.valueobjects.AvailabilityVO;
-import com.webflux.poc.valueobjects.ReservationVO;
 
 import lombok.extern.slf4j.Slf4j;
 import reactor.core.publisher.Flux;
@@ -97,24 +93,6 @@ public class AvailabilityController {
 	}
 	
 	
-	/**
-	 * This method to handle updating a Reservation based on reservation ID
-	 * @param restaurant
-	 * @param id
-	 * @return
-	 */
-	@PutMapping(RestaurantBookingConstants.MASTER_DATA_AVAILABLITY_UPDATE+ "/{id}")
-	public Mono<ResponseEntity<Availability>> updateReservation(@RequestBody Availability availability,
-			@PathVariable String id) {
-
-		if (logger.isDebugEnabled()) {
-			logger.debug("Request received for updateReservation");
-		}
-		return availabilityService.updateAvailabilityMasterData(availability, id)
-				.map(updatedAvailablity -> new ResponseEntity<>(updatedAvailablity, HttpStatus.OK))
-				.defaultIfEmpty(new ResponseEntity<Availability>(HttpStatus.NOT_FOUND));
-
-	}
 	
 	
 	
