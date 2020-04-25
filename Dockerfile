@@ -12,5 +12,6 @@ COPY ${JAR_FILE} app.jar
 
 # java -jar /opt/app/app.jar
 ENTRYPOINT ["java","-jar","app.jar"]
+#ENTRYPOINT ["java","-Ddockerspring.data.mongodb.uri=mongodb://mongodb:27017/restaurant-booking","-Djava.security.egd=file:/dev/./urandom","-jar","app.jar"]
 
 ## sudo docker run -p 8080:8080 -t docker-spring-boot:1.0
