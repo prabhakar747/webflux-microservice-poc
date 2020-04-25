@@ -2,6 +2,7 @@ package com.webflux.poc.model;
 
 import java.util.List;
 
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import lombok.AllArgsConstructor;
@@ -18,6 +19,8 @@ import lombok.Setter;
 @NoArgsConstructor
 public class Employee {
 
+	@Id
+	private String employeeId;
 	private String name;
 	private String dateOfBirth;
 	private String gender;
