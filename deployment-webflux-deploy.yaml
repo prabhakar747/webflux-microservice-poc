@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: webflux-deploy
+  name: webflux-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: webflux-deploy
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: webflux-deploy
+    spec:
+      containers:
+      - image: prabhakar747/spring-webflux-poc
+        name: spring-webflux-poc
+        resources: {}
+status: {}
