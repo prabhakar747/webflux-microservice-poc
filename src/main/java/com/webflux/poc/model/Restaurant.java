@@ -26,7 +26,7 @@ import lombok.ToString;
 @Setter
 @Getter
 @ToString
-public class Restaurant {
+public class Restaurant{
 	
 	@Id
 	private String restaurantId;

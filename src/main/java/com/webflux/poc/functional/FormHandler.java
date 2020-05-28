@@ -19,6 +19,7 @@ import static com.webflux.poc.constants.EmployeeConstants.WEBSITE;
 import static com.webflux.poc.constants.EmployeeConstants.ZIP_CODE;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.reactive.function.server.ServerRequest;
@@ -28,6 +29,9 @@ import com.webflux.poc.model.Employee;
 import com.webflux.poc.repository.EmployeeRepository;
 
 import reactor.core.publisher.Mono;
+
+import static org.springframework.web.reactive.function.BodyInserters.fromPublisher;
+import static org.springframework.web.reactive.function.server.ServerResponse.ok;
 
 @Component
 public class FormHandler {
@@ -45,12 +49,13 @@ public class FormHandler {
 		
 		Mono<MultiValueMap<String, String>> formData = request.formData();
 		
-		// BodyExtractor based. It didn't result any value for our program
-		// It looks any earlier piece of code (Filter ?) already accessed the body
-		// making it empty.
+		final Mono<Employee> book = request.bodyToMono(Employee.class);
+         ok()
+                .contentType(MediaType.APPLICATION_JSON)
+                .body(fromPublisher(book.flatMap(employeeRepository::save), Employee.class));
 		
-		// Mono<MultiValueMap<String, String>> formData = request.body(BodyExtractors.toFormData());		
-		employeeRepository.save(formDataToEmployee(formData));
+		
+		/* employeeRepository.insert(formDataToEmployee(formData)); */
 		return ServerResponse.ok().render(DISPLAY_FORM_DATA, formDataToEmployee(formData));
 	}
 
