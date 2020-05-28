@@ -1,10 +1,13 @@
+/*
 package com.java.core;
 
 public class Leet {
 
-	/**
+	*/
+/**
 	 * @param args
-	 */
+	 *//*
+
 	
 
 	public static int findMaxConsecutiveOnes() {
@@ -65,7 +68,8 @@ public class Leet {
 		System.out.println("Result:" + Arrays.toString(nums));
 		return nums;
 
-		/*
+		*/
+/*
 		 * for (int i = 0; i < nums.length; i++) { System.out.println("i :" + i +
 		 * " value :" + Arrays.toString(nums));
 		 * 
@@ -79,7 +83,8 @@ public class Leet {
 		 * System.out.println("After j:" + j + " value :" + Arrays.toString(nums)); }
 		 * 
 		 * } System.out.println("Result:" + Arrays.toString(nums)); return nums;
-		 */
+		 *//*
+
 
 	}
 
@@ -235,3 +240,4 @@ public class Leet {
 		validMountainArray();
 	}
 }
+*/
