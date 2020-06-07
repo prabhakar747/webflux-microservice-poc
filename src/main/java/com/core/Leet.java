@@ -1,18 +1,16 @@
-/*
-package com.java.core;
+
+package com.core;
+
+import java.util.Arrays;
 
 public class Leet {
 
-	*/
-/**
-	 * @param args
-	 *//*
 
 	
 
 	public static int findMaxConsecutiveOnes() {
 
-		int nums[] = new int[] { 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1 };
+		int[] nums = new int[] { 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1 };
 
 		int run = 0, maxLen = 0;
 
@@ -31,15 +29,15 @@ public class Leet {
 	}
 
 	public static int findNumbers() {
-		int nums[] = new int[] { 555, 901, 482, 1771 };
+		int[] nums = new int[] { 555, 901, 482, 1771 };
 		int result = 0;
 		int remainder = 0;
 		int finalResult = 0;
-		for (int i = 0; i < nums.length; i++) {
+		for (int num : nums) {
 			int noOfDigits = 0;
-			int temp = nums[i];
+			int temp = num;
 			while (true) {
-				if (nums[i] > 9) {
+				if (num > 9) {
 					remainder = temp / 10;
 					noOfDigits++;
 					temp = remainder;
@@ -50,7 +48,7 @@ public class Leet {
 				}
 			}
 			finalResult = (noOfDigits % 2 == 0) ? (finalResult + 1) : finalResult;
-			System.out.println("no of digits for " + nums[i] + " are " + noOfDigits);
+			System.out.println("no of digits for " + num + " are " + noOfDigits);
 		}
 		System.out.println("Result:" + finalResult);
 		return finalResult;
@@ -59,31 +57,32 @@ public class Leet {
 
 	public static int[] sortedSquares() {
 
-		int nums[] = new int[] { -3, 0, 2 };
+		int[] nums = new int[] { -3, 0, 2 };
 		int temp;
 		for (int i = 0; i < nums.length; i++) {
-			nums[i] = nums[i] * nums[i];
+			nums[i] *= nums[i];
 		}
 		Arrays.sort(nums);
 		System.out.println("Result:" + Arrays.toString(nums));
 		return nums;
 
-		*/
 /*
-		 * for (int i = 0; i < nums.length; i++) { System.out.println("i :" + i +
-		 * " value :" + Arrays.toString(nums));
-		 * 
-		 * if (nums.length == 2 & i < 2) { if (nums[i] > nums[i + 1]) { temp = nums[i];
-		 * nums[i] = nums[i + 1]; nums[i + 1] = temp; System.out.println("Result:" +
-		 * Arrays.toString(nums)); } return nums; }
-		 * 
-		 * for (int j = i + 1; j < (nums.length - 1); j++) {
-		 * System.out.println("Before J:" + j + " value :" + Arrays.toString(nums)); if
-		 * (nums[i] > nums[j]) { temp = nums[i]; nums[i] = nums[j]; nums[j] = temp; }
-		 * System.out.println("After j:" + j + " value :" + Arrays.toString(nums)); }
-		 * 
-		 * } System.out.println("Result:" + Arrays.toString(nums)); return nums;
-		 *//*
+
+		  for (int i = 0; i < nums.length; i++) { System.out.println("i :" + i +
+		  " value :" + Arrays.toString(nums));
+
+		  if (nums.length == 2 & i < 2) { if (nums[i] > nums[i + 1]) { temp = nums[i];
+		  nums[i] = nums[i + 1]; nums[i + 1] = temp; System.out.println("Result:" +
+		  Arrays.toString(nums)); } return nums; }
+
+		  for (int j = i + 1; j < (nums.length - 1); j++) {
+		  System.out.println("Before J:" + j + " value :" + Arrays.toString(nums)); if
+		  (nums[i] > nums[j]) { temp = nums[i]; nums[i] = nums[j]; nums[j] = temp; }
+		  System.out.println("After j:" + j + " value :" + Arrays.toString(nums)); }
+
+		  } System.out.println("Result:" + Arrays.toString(nums)); return nums;
+*/
+
 
 
 	}
@@ -159,10 +158,7 @@ public class Leet {
 				else 
 					nums3[k++]= nums1[i++];
 			}else {
-				if(nums2[j] == 0)
-					j++;
-				else  
-					nums3[k++] =nums2[j++];
+				nums3[k++] =nums2[j++];
 			}
 				
 		}
@@ -208,17 +204,17 @@ public class Leet {
 	public static boolean search1() {
 		 int[] nums = new int[] {0,0};
 		 boolean result = false;
-		 for (int i = 0; i < nums.length; i++) {
-			int value = nums[i]*2;
-			if(value !=0 ) {
+		for (int num : nums) {
+			int value = num * 2;
+			if (value != 0) {
 				for (int j = 0; j < nums.length; j++) {
-					if(nums[j]==value) {
-						result =  true;
-						System.err.println("Result:"+result);
+					if (nums[j] == value) {
+						result = true;
+						System.err.println("Result:" + result);
 						return result;
 					}
 				}
-			}else if(nums.length ==2 && nums[0]==0 && nums[1]==0) {
+			} else if (nums[0] == 0 && nums[1] == 0) {
 				return true;
 			}
 		}
@@ -240,4 +236,4 @@ public class Leet {
 		validMountainArray();
 	}
 }
-*/
+
