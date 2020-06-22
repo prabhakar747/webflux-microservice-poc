@@ -1,13 +1,13 @@
 /**
  * 
  */
-package com.java.modern.lamda;
+package com.modern.lamda;
 
 import java.util.List;
 import java.util.function.Consumer;
 
-import com.java.modern.data.Student;
-import com.java.modern.data.StudentDataBase;
+import com.modern.data.Student;
+import com.modern.data.StudentDataBase;
 
 /**
  * @author prabh

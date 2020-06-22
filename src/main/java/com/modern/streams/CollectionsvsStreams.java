@@ -1,4 +1,4 @@
-package com.java.modern.streams;
+package com.modern.streams;
 
 import java.util.ArrayList;
 import java.util.stream.Stream;

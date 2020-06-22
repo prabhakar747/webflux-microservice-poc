@@ -1,8 +1,8 @@
-package com.java.modern.methodreferences;
+package com.modern.methodreferences;
 
 import java.util.function.Supplier;
 
-import com.java.modern.data.Student;
+import com.modern.data.Student;
 
 public class SupplierMethodReferenceExample {
 

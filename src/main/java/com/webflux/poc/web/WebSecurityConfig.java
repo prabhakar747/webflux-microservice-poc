@@ -1,3 +1,4 @@
+/*
 package com.webflux.poc.web;
 
 import org.springframework.context.annotation.Bean;
@@ -40,4 +41,4 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
         return new InMemoryUserDetailsManager(user);
     }
-}
+}*/

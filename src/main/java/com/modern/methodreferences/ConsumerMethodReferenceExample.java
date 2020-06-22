@@ -1,9 +1,9 @@
-package com.java.modern.methodreferences;
+package com.modern.methodreferences;
 
 import java.util.function.Consumer;
 
-import com.java.modern.data.Student;
-import com.java.modern.data.StudentDataBase;
+import com.modern.data.Student;
+import com.modern.data.StudentDataBase;
 
 public class ConsumerMethodReferenceExample {
 

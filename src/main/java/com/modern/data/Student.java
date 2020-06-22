@@ -1,4 +1,4 @@
-package com.java.modern.data;
+package com.modern.data;
 
 import java.util.ArrayList;
 import java.util.List;

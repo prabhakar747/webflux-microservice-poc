@@ -1,6 +1,6 @@
-package com.java.modern.streams;
+package com.modern.streams;
 
-import com.java.modern.data.StudentDataBase;
+import com.modern.data.StudentDataBase;
 
 public class StreamsMatchExample {
 

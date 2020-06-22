@@ -1,4 +1,4 @@
-package com.java.modern.streams;
+package com.modern.streams;
 
 import static java.util.stream.Collectors.toList;
 

@@ -1,11 +1,11 @@
-package com.java.modern.streams;
+package com.modern.streams;
 
 import static java.util.stream.Collectors.toList;
 
 import java.util.List;
 
-import com.java.modern.data.Student;
-import com.java.modern.data.StudentDataBase;
+import com.modern.data.Student;
+import com.modern.data.StudentDataBase;
 
 public class StreamFlatMapExample {
 

@@ -1,12 +1,12 @@
-package com.java.modern.lamda;
+package com.modern.lamda;
 
 import java.util.List;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
-import com.java.modern.data.Student;
-import com.java.modern.data.StudentDataBase;
+import com.modern.data.Student;
+import com.modern.data.StudentDataBase;
 
 public class PredicateAndConsumerExample {
 
@@ -23,7 +23,7 @@ public class PredicateAndConsumerExample {
         }
     };
 
-    Consumer<Student> studentConsumer1 = ((student) -> {
+    Consumer<com.modern.data.Student> studentConsumer1 = ((student) -> {
 
         if(p1.and(p2).test(student)){
             studentBiConsumer.accept(student.getName(),student.getActivities());

@@ -1,4 +1,4 @@
-package com.java.modern.methodreferences;
+package com.modern.methodreferences;
 
 import java.util.function.Function;
 
