@@ -1,4 +1,4 @@
-package com.core;
+package com.core.leet.easy;
 
 import java.util.*;
 

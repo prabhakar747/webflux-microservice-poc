@@ -1,4 +1,4 @@
-package com.core;
+package com.core.leet.easy;
 
 public class EasyDay13_2 {
 
